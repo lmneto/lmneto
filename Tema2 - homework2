@@ -1,0 +1,34 @@
+#1
+def int_filter(tokens):
+	for v in tokens:
+    		try:
+        		int(v)
+	   		yield v
+		except ValueError:
+			continue
+
+def mySum(*args):
+	argint=list(int_filter(args))
+        return sum(argint)
+        
+#2
+def sum_all(p):
+	while a < p:
+		sum = a + sum
+		if a % 2 == 0:
+			sumeven = sumeven + a
+		else:
+			sumodd = sumodd + a
+		a++
+	return [sum_all, sumeven, sumodd]
+
+#3
+def read_int():
+	val = input("Please enter an integer:\n")
+	for i in val:
+		try:
+			int(val)
+			continue
+		except ValueError:
+			print("This is not an integer")
+			read_int()
